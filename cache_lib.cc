@@ -18,7 +18,7 @@ public:
     size_type space_used_ = 0;
     std::unordered_map <key_type, Cache::val_type, hash_func> cache_;
 
-    //using list initialization which allows us to easy initialization of the unordered map especially
+    //using list initialization which allows us to easily initialize the unordered map
     Impl(size_type maxmem, float max_load_factor, Evictor* evictor, hash_func hasher):  maxmem_{maxmem}, max_load_factor_{max_load_factor},
         evictor_{evictor}, hasher_{hasher}, cache_{maxmem, hasher} {};
 
@@ -114,7 +114,5 @@ void Cache::reset(){
 
 }
 
-
-EvictionPolicy::~EvictionPolicy(){}
 
 
