@@ -97,6 +97,8 @@ Cache::val_type Cache::get(key_type key, size_type& val_size) const{
 }
 
 
+EvictionPolicy::~EvictionPolicy(){}
+
 
 Cache::size_type Cache::space_used() const {
     return pImpl_->space_used_;
